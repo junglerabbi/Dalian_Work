@@ -1,3 +1,12 @@
+body{
+    background-image: url(../img/bg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+a{
+    color:white;
+}
+
 /***头部信息***/
 .title{
   
@@ -15,11 +24,9 @@
 	width:400px;
 }
 .sidebar-menu{
-    border-right: 1px solid #c4c8cb;
     margin-left: 100px;
     margin-top: 50px;
     width:300px;
-    border:1px #aaa solid;
     padding:50px;
 }
 /*一级菜单*/
@@ -31,12 +38,21 @@
     font-weight: normal;
     text-align: center;
     transition:background-color 1s;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 .menu-first:hover{
+    color:white;
     text-decoration: none;
-    background-color: lightblue;
+    background-color:rgba(0, 0, 0, 0.3);
 }
-
+.menu-first:link{
+    color:white;
+}
+.menu-first:visited{
+    color:white;
+}
 
 /*二级菜单*/
 .menu-second li a{
@@ -48,26 +64,32 @@
     text-align:center;
     padding:10px;
     margin-left: 50px;
+    background-color:rgba(0, 0, 0, 0.1)
     transition:background-color 1s;
+    color:white;
+    text-decoration: none;
 }
 /*二级菜单鼠标划过样式*/
 .menu-second li a:hover {
+    color:white;
     text-decoration: none;
-    background-color: #66c3ec;
-    border-top: 1px solid #83ceed;
-    border-bottom: 1px solid #83ceed;
+    background-color:rgba(0, 0, 0, 0.3);
     border-right: 3px solid #f8881c;
-    border-left: 3px solid #66c3ec;
+}
+.menu-second li a:link{
+    color:white;
+    text-decoration: none;
+}
+.menu-second li a:visited{
+    color:white;
+    text-decoration: none;
 }
 /*二级菜单选中状态*/
 .menu-second-selected {
-    background-color: #66c3ec;
+    background-color: rgba(0, 0, 0, 0.3);
     height:31px;
     line-height:31px;
-    border-top: 1px solid #83ceed;
-    border-bottom: 1px solid #83ceed;
     border-right: 3px solid #f8881c;
-    border-left: 3px solid #66c3ec;
     text-align:center;
 }
 /*覆盖bootstrap的样式*/
@@ -82,17 +104,23 @@
 
 .content_right{
 	position: absolute;
-	width:800px;
-	border:1px #ccc solid;
+	width:900px;
+    height:600px;
+	border:3px solid;
+    border-color: rgba(0,0,0,0.2);
 	margin-left: 400px;
 	margin-top: 50px;
 	min-height: 400px;
+    padding:20px 50px 20px 50px;
 }
 /*右侧表单头部*/
 .content_right_header>span{
-   background-color: rgba(255,251,240,0.5);
+   color:white;
    font-size: 16px;
    margin-top: 30px;
+}
+.content_right_header>span a{
+    color:gold;
 }
 .create_button{
 	margin-left: 720px;
@@ -110,4 +138,71 @@
 .search_button{
 	margin-left: 720px;
 }
+.search_input span{
+    background-color: lightblue;
+}
+/*右侧表单body*/
+.table{
+    background-color: rgba(0,0,0,0.1);
+    margin-top: 15px;
+    color:white;
+}
+
+
 /***右侧表单结束***/
+
+
+/*event css*/
+.event_input{
+    position: absolute;
+    width:350px;
+    margin-top: 20px;
+}
+.event_input span{
+    background-color: lightblue;
+}
+.chance_from{
+    margin-left: 400px;
+}
+.chance_name{
+    margin-top: 70px;
+}
+.chance_success{
+    margin-top: 70px;
+    margin-left: 400px;
+}
+.chance_abstract{
+    margin-top: 120px;
+}
+.chance_people{
+    margin-top: 120px;
+    margin-left: 400px;
+}
+.chance_phone{
+    margin-top: 170px;
+}
+.chance_description{
+    margin-top:170px;
+    height:50px;
+    width:600px;
+}
+.chance_description textarea{
+    resize:none;
+}
+.chance_create_people{
+    margin-top: 260px;
+}
+.chance_create_time{
+    margin-top: 260px;
+    margin-left: 400px;
+}
+.chance_refer_to{
+    margin-top: 310px;
+}
+.chance_refer_time{
+    margin-top: 310px;
+    margin-left: 400px;
+}
+#return_button{
+    margin-left: 530px;
+}
