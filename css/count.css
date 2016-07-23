@@ -1,0 +1,139 @@
+body{
+    background-image: url(../img/bg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+a{
+    color:white;
+}
+
+/***头部信息***/
+.title{
+  
+}
+
+/***头部信息结束***/
+
+
+/***左侧列表***/
+.content{
+	position: relative;
+}
+.content_left{
+	position: absolute;
+	width:400px;
+}
+.sidebar-menu{
+    margin-left: 100px;
+    margin-top: 50px;
+    width:300px;
+    padding:50px;
+}
+/*一级菜单*/
+.menu-first{
+    height:45px;
+    line-height:45px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    transition:background-color 1s;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.menu-first:hover{
+    color:white;
+    text-decoration: none;
+    background-color:rgba(0, 0, 0, 0.3);
+}
+.menu-first:link{
+    color:white;
+}
+.menu-first:visited{
+    color:white;
+}
+
+/*二级菜单*/
+.menu-second li a{
+	display: block;
+	width: 200px;
+    height:31px;
+    line-height:31px;
+    font-size: 15px;
+    text-align:center;
+    padding:10px;
+    margin-left: 50px;
+    background-color:rgba(0, 0, 0, 0.1)
+    transition:background-color 1s;
+    color:white;
+    text-decoration: none;
+}
+/*二级菜单鼠标划过样式*/
+.menu-second li a:hover {
+    color:white;
+    text-decoration: none;
+    background-color:rgba(0, 0, 0, 0.3);
+    border-right: 3px solid #f8881c;
+}
+.menu-second li a:link{
+    color:white;
+    text-decoration: none;
+}
+.menu-second li a:visited{
+    color:white;
+    text-decoration: none;
+}
+/*二级菜单选中状态*/
+.menu-second-selected {
+    background-color: rgba(0, 0, 0, 0.3);
+    height:31px;
+    line-height:31px;
+    border-right: 3px solid #f8881c;
+    text-align:center;
+}
+/*覆盖bootstrap的样式*/
+.nav-list,.nav-list li a{
+    padding: 0px;
+    margin: 0px;
+}
+
+/***左侧列表结束***/
+.table{
+    background-color: rgba(0,0,0,0.1);
+    margin-top: 15px;
+    color:white;
+}
+
+/***右侧表单***/
+
+.content_right{
+	position: absolute;
+	width:900px;
+    height:600px;
+	border:3px solid;
+    border-color: rgba(0,0,0,0.2);
+	margin-left: 400px;
+	margin-top: 50px;
+	min-height: 400px;
+    padding:20px 50px 20px 50px;
+}
+/*右侧表单头部*/
+.content_right_header>span{
+   color:white;
+   font-size: 16px;
+   margin-top: 30px;
+}
+.content_right_header>span a{
+    color:gold;
+}
+/*右侧表单body*/
+
+
+/***右侧表单结束***/
+.contribution_ana{
+    width:900px;
+}
+.search_input{
+    margin-top: 30px;
+}

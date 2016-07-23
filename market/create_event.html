@@ -58,47 +58,63 @@
 
 	<div class="content_right">
 		<div class="content_right_header">
-			<span class="locate_span">当前位置：——&gt;<a href="chance.html">销售机会管理</a></span><br>
-			<a href="create_event.html" class="create_button btn btn-primary">新建</a><br><br>
-			<div class="input-group search_input search1">
-				<span class="input-group-addon">客户名称</span>
-				<input type="text" class="form-control " placeholder="请输入客户名称"/>
-			</div>
-			<div class="input-group search_input search2">
-				<span class="input-group-addon">概要</span>
-				<input type="text" class="form-control " placeholder="请输入概要"/>
-			</div>
-			<div class="input-group search_input  search3">
-				<span class="input-group-addon">联系人</span>
-				<input type="text" class="form-control" placeholder="请输入联系人"/>
-			</div>
-			<button class="search_button btn btn-success">查询</button>
+			<span class="locate_span">当前位置：——&gt;<a href="creat_event.html">创建机会</a></span><br>
+			<a href="chance.html" class="btn btn-warning" id="return_button">返回</a>
+			<button class="btn btn-success" type="submit" id="save_button">保存</button>
 		</div>
 		<div class="content_right_body">
-			<table class="table">
-				<thead>
-					<tr>
-						<th class="thead">编号</th>
-						<th class="thead">客户名称</th>
-						<th class="thead">概要</th>
-						<th class="thead">联系人</th>
-						<th class="thead">联系人电话</th>
-						<th class="thead">创建时间</th>
-						<th class="thead">操作</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-					  <th class="tbody">1</th>
-					  <th class="tbody">睿智数码</th>
-					  <th class="tbody">采购笔记本电脑意向</th>
-					  <th class="tbody">刘先生</th>
-					  <th class="tbody">13729239239</th>
-					  <th class="tbody">2016年7月22日</th>
-					  <th class="tbody"><a href="event.html">详情</a>&nbsp;<a href="" onClick="delete_event(this)">删除</a></th>
-					</tr>
-				</tbody>
-			</table>
+			<div class="input-group event_input chance_id">
+				<span class="input-group-addon">编号</span>
+				<input type="text" class="form-control" />
+			</div>
+			<div class="input-group event_input chance_from">
+				<span class="input-group-addon">机会来源</span>
+				<input type="text" class="form-control" />
+			</div>
+			<div class="input-group event_input chance_name">
+				<span class="input-group-addon">客户名称</span>
+				<input type="text" required=" " class="form-control" />
+			</div>
+			<div class="input-group event_input chance_success">
+				<span class="input-group-addon">成功几率</span>
+				<input type="text" required=" " class="form-control" />
+			</div>
+			<div class="input-group event_input chance_abstract">
+				<span class="input-group-addon">概要</span>
+				<input type="text" required=" " class="form-control" />
+			</div>
+			<div class="input-group event_input chance_people">
+				<span class="input-group-addon">联系人</span>
+				<input type="text" class="form-control" />
+			</div>
+			<div class="input-group event_input chance_phone">
+				<span class="input-group-addon">联系人电话</span>
+				<input type="text" class="form-control" />
+			</div>
+			<div class="input-group event_input chance_description">
+				<span class="input-group-addon">机会描述</span>
+				<textarea class="form-control" required=" "></textarea>
+			</div>
+			<div class="input-group event_input chance_create_people">
+				<span class="input-group-addon">创建人</span>
+				<input type="text" required=" " class="form-control" />
+			</div>
+			<div class="input-group event_input chance_create_time">
+				<span class="input-group-addon">创建时间</span>
+				<input type="text" required=" " data-date-format="yyyy-mm-dd" class="form-control create_time form_datetime" />
+			</div>
+			<div class="input-group event_input chance_refer_to">
+				<span class="input-group-addon">指派给</span>
+				<select class="form-control">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+				</select>
+			</div>
+			<div class="input-group event_input chance_refer_time">
+				<span class="input-group-addon">指派时间</span>
+				<input type="text" data-date-format="yyyy-mm-dd" class="form-control refer_time form_datetime" />
+			</div>
 		</div>
 	</div>
 </section>
@@ -108,9 +124,24 @@
 <script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="../js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
 <script type="text/javascript">
-	var delete_event = function(o){
-		$(o).parent.parent.parent.empty();
-	}
+	$(".create_time").datetimepicker({
+		language:'zh-CN',
+		weekStart:1,
+		autoclose:1,
+		todayHighlight:1,
+		startView:2,
+		minView:2,
+		forceParse:0,
+	});
+	$(".refer_time").datetimepicker({
+		language:'zh-CN',
+		weekStart:1,
+		autoclose:1,
+		todayHighlight:1,
+		startView:2,
+		minView:2,
+		forceParse:0,
+	});
 </script>
 </body>
 </html>

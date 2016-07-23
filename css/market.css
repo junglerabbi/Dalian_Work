@@ -204,5 +204,56 @@ a{
     margin-left: 400px;
 }
 #return_button{
-    margin-left: 530px;
+    margin-left: 630px;
+}
+
+.tbody a{
+    color:white;
+    margin-left: 5px;
+}
+.tbody a:hover{
+    color:white;
+}
+.tbody a:link{
+    color:white;
+}
+.tbody a:visited{
+    color:white;
+}
+
+/*客户计划管理*/
+
+/*制定计划*/
+#add_plan{
+    width:800px;
+   position: absolute;
+   margin-top: 350px;
+   background-color: (255,251,240,0.3);
+}
+.add_plan_time{
+    position: absolute;
+    margin-top: 450px;
+    width:300px;
+}
+.add_plan_event{
+    position: absolute;
+    margin-top: 450px;
+    width:350px;
+    margin-left: 350px;
+}
+#save_add{
+    position: absolute;
+    margin-top: 450px;
+    margin-left: 730px;
+}
+
+/*执行计划*/
+#add_plan a{
+    color:white;
+}
+#add_plan a:hover{
+    color:white;
+}
+#use_plan_return_button{
+    margin-left: 450px;
 }

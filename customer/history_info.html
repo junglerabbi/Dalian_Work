@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>销售机会管理</title>
+	<title>客户信息管理</title>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap-datetimepicker.css">
-	<link rel="stylesheet" type="text/css" href="../css/market.css">
+	<link rel="stylesheet" type="text/css" href="../css/customer.css">
 </head>
 <body>
 <section class="header">
@@ -20,16 +20,16 @@
 			<!--销售管理菜单栏-->
 			<a href="#market" class="nav-header menu-first collapsed" data-toggle="collapse">营销管理</a><br><br>
 			<ul id="market" class="nav nav-list collapse menu-second">
-				<li><a href="chance.html">销售机会管理</a></li>
-				<li><a href="plan.html">客户开发计划</a></li><br>
+				<li><a href="../market/chance.html">销售机会管理</a></li>
+				<li><a href="../market/plan.html">客户开发计划</a></li><br>
 			</ul>
 			<!--销售管理菜单栏-->
 
 			<!--客户管理菜单栏-->
 			<a href="#customer" class="nav-header menu-first collapsed" data-toggle="collapse">客户管理</a><br><br>
 			<ul id="customer" class="nav nav-list collapse menu-second">
-				<li><a href="../customer/customer.html">客户信息管理</a></li>
-				<li><a href="../customer/customer_disappear.html">客户流失管理</a></li><br>
+				<li><a href="customer.html">客户信息管理</a></li>
+				<li><a href="customer_disappear.html">客户流失管理</a></li><br>
 			</ul>
 			<!--客户管理菜单栏-->
 			
@@ -58,47 +58,72 @@
 
 	<div class="content_right">
 		<div class="content_right_header">
-			<span class="locate_span">当前位置：——&gt;<a href="chance.html">销售机会管理</a></span><br>
-			<a href="create_event.html" class="create_button btn btn-primary">新建</a><br><br>
-			<div class="input-group search_input search1">
-				<span class="input-group-addon">客户名称</span>
-				<input type="text" class="form-control " placeholder="请输入客户名称"/>
+			<span class="locate_span">当前位置：——&gt;<a href="history_info.html">订单详细</a></span><br>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 col-lg-7">
+						<div></div>
+					</div>
+					<div class="col-md-4 col-lg-4">
+						<a href="history.html" class="btn btn-default">返回</a>
+					</div>
+				</div>
 			</div>
-			<div class="input-group search_input search2">
-				<span class="input-group-addon">概要</span>
-				<input type="text" class="form-control " placeholder="请输入概要"/>
-			</div>
-			<div class="input-group search_input  search3">
-				<span class="input-group-addon">联系人</span>
-				<input type="text" class="form-control" placeholder="请输入联系人"/>
-			</div>
-			<button class="search_button btn btn-success">查询</button>
 		</div>
 		<div class="content_right_body">
 			<table class="table">
 				<thead>
 					<tr>
-						<th class="thead">编号</th>
-						<th class="thead">客户名称</th>
-						<th class="thead">概要</th>
-						<th class="thead">联系人</th>
-						<th class="thead">联系人电话</th>
-						<th class="thead">创建时间</th>
-						<th class="thead">操作</th>
+						<th class="thead">商品</th>
+						<th class="thead">数量</th>
+						<th class="thead">单价</th>
+						<th class="thead">金额</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-					  <th class="tbody">1</th>
-					  <th class="tbody">睿智数码</th>
-					  <th class="tbody">采购笔记本电脑意向</th>
-					  <th class="tbody">刘先生</th>
-					  <th class="tbody">13729239239</th>
-					  <th class="tbody">2016年7月22日</th>
-					  <th class="tbody"><a href="event.html">详情</a>&nbsp;<a href="" onClick="delete_event(this)">删除</a></th>
+					  <th class="tbody">1213412</th>
+					  <th class="tbody">2016.7.23</th>
+					  <th class="tbody">北京海淀区劳动路205号</th>
+					  <th class="tbody">未回款</th>
+					  <th class="tbody"><a href="history_info.html">详细信息</a></th>
 					</tr>
 				</tbody>
 			</table>
+			<div class="container">
+				<div class="row history_info_row">
+					<div class="col-md-5">
+						<div class="input-group history_info_input">
+                            <span class="input-group-addon">订单编号</span>
+                            <input type="text" class="form-control" disabled="disabled" />
+                        </div>
+					</div>
+					<div class="col-md-5">
+						<div class="input-group history_info_input">
+                            <span class="input-group-addon">日期</span>
+                            <input type="text" class="form-control" disabled="disabled" />
+                        </div>
+					</div>
+					<div class="col-md-5">
+						<div class="input-group history_info_input">
+                            <span class="input-group-addon">送货地址</span>
+                            <input type="text" class="form-control" disabled="disabled" />
+                        </div>
+					</div>
+					<div class="col-md-5">
+						<div class="input-group history_info_input">
+                            <span class="input-group-addon">总金额（元）</span>
+                            <input type="text" class="form-control" disabled="disabled" />
+                        </div>
+					</div>
+					<div class="col-md-5">
+						<div class="input-group history_info_input">
+                            <span class="input-group-addon">状态</span>
+                            <input type="text" class="form-control" disabled="disabled" />
+                        </div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -108,9 +133,7 @@
 <script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="../js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
 <script type="text/javascript">
-	var delete_event = function(o){
-		$(o).parent.parent.parent.empty();
-	}
+	
 </script>
 </body>
 </html>

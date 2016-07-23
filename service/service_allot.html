@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>销售机会管理</title>
+	<title>客户服务管理</title>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap-datetimepicker.css">
-	<link rel="stylesheet" type="text/css" href="../css/market.css">
+	<link rel="stylesheet" type="text/css" href="../css/service.css">
 </head>
 <body>
 <section class="header">
@@ -20,8 +20,8 @@
 			<!--销售管理菜单栏-->
 			<a href="#market" class="nav-header menu-first collapsed" data-toggle="collapse">营销管理</a><br><br>
 			<ul id="market" class="nav nav-list collapse menu-second">
-				<li><a href="chance.html">销售机会管理</a></li>
-				<li><a href="plan.html">客户开发计划</a></li><br>
+				<li><a href="../market/chance.html">销售机会管理</a></li>
+				<li><a href="../market/plan.html">客户开发计划</a></li><br>
 			</ul>
 			<!--销售管理菜单栏-->
 
@@ -37,10 +37,10 @@
 			<a href="#service" class="nav-header menu-first collapsed" data-toggle="collapse">服务管理</a><br><br>
 			<ul id="service" class="nav nav-list collapse menu-second">
 				<li><a href="../service/service_create.html">服务创建</a></li>
-				<li><a href="../service/service_allot.html">服务分配</a></li>
-				<li><a href="../service/service_deal.html">服务处理</a></li>
-				<li><a href="../service/service_response.html">服务反馈</a></li>
-				<li><a href="../service/service_back.html">服务归档</a></li><br>
+                <li><a href="../service/service_allot.html">服务分配</a></li>
+                <li><a href="../service/service_deal.html">服务处理</a></li>
+                <li><a href="../service/service_response.html">服务反馈</a></li>
+                <li><a href="../service/service_back.html">服务归档</a></li><br>
 			</ul>
 			<!--服务管理菜单栏-->
 
@@ -58,32 +58,63 @@
 
 	<div class="content_right">
 		<div class="content_right_header">
-			<span class="locate_span">当前位置：——&gt;<a href="chance.html">销售机会管理</a></span><br>
-			<a href="create_event.html" class="create_button btn btn-primary">新建</a><br><br>
-			<div class="input-group search_input search1">
-				<span class="input-group-addon">客户名称</span>
-				<input type="text" class="form-control " placeholder="请输入客户名称"/>
+			<span class="locate_span">当前位置：——&gt;<a href="service_allot.html">服务分配</a></span><br>
+			<div class="container">
+				<div class="row service_search_row">
+					<div class="col-md-9"></div>
+					<div class="col-md-2">
+						<button class="btn btn-success">查询</button>
+					</div>
+					<div class="col-md-4">
+						<div class="input-group search_input">
+							<span class="input-group-addon">客户名称</span>
+							<input type="text" class="form-control " placeholder="请输入客户名称"/>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="input-group search_input">
+							<span class="input-group-addon">概要</span>
+							<input type="text" class="form-control " placeholder="请输入概要"/>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="input-group search_input">
+							<span class="input-group-addon">服务类型</span>
+							<select class="form-control">
+								<option>咨询</option>
+								<option>建议</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="input-group search_input">
+							<span class="input-group-addon">创建时间</span>
+							<input type="text" required=" " data-date-format="yyyy-mm-dd" class="form-control create_time1 form_datetime" />
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="input-group search_input">
+							<span class="input-group-addon">状态</span>
+							<select class="form-control">
+								<option>新创建</option>
+								<option>已分配</option>
+							</select>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="input-group search_input search2">
-				<span class="input-group-addon">概要</span>
-				<input type="text" class="form-control " placeholder="请输入概要"/>
-			</div>
-			<div class="input-group search_input  search3">
-				<span class="input-group-addon">联系人</span>
-				<input type="text" class="form-control" placeholder="请输入联系人"/>
-			</div>
-			<button class="search_button btn btn-success">查询</button>
 		</div>
 		<div class="content_right_body">
 			<table class="table">
 				<thead>
 					<tr>
 						<th class="thead">编号</th>
-						<th class="thead">客户名称</th>
+						<th class="thead">客户</th>
 						<th class="thead">概要</th>
-						<th class="thead">联系人</th>
-						<th class="thead">联系人电话</th>
+						<th class="thead">服务类型</th>
+						<th class="thead">创建人</th>
 						<th class="thead">创建时间</th>
+						<th class="thead">分配给</th>
 						<th class="thead">操作</th>
 					</tr>
 				</thead>
@@ -92,10 +123,15 @@
 					  <th class="tbody">1</th>
 					  <th class="tbody">睿智数码</th>
 					  <th class="tbody">采购笔记本电脑意向</th>
+					  <th class="tbody">咨询</th>
 					  <th class="tbody">刘先生</th>
-					  <th class="tbody">13729239239</th>
-					  <th class="tbody">2016年7月22日</th>
-					  <th class="tbody"><a href="event.html">详情</a>&nbsp;<a href="" onClick="delete_event(this)">删除</a></th>
+					  <th class="tbody">2016.7.23</th>
+					  <th class="tbody">
+					  	<select class="form-control">
+					  	<option></option>	
+					  	</select>
+					  </th>
+					  <th class="tbody"><a href="javascript:void(0)" class="btn">分配</a><a href="">删除</a></th>
 					</tr>
 				</tbody>
 			</table>
@@ -108,9 +144,16 @@
 <script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="../js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
 <script type="text/javascript">
-	var delete_event = function(o){
-		$(o).parent.parent.parent.empty();
-	}
+	 $(".create_time1").datetimepicker({
+        language:'zh-CN',
+        weekStart:1,
+        autoclose:1,
+        todayHighlight:1,
+        startView:2,
+        minView:2,
+        forceParse:0,
+    });
+	
 </script>
 </body>
 </html>
